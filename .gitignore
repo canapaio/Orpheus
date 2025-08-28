@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+CHESHIRE_CAT_GUIDE.md
+test_orpheus.py
+test_modello_italiano.py
+ANALISI_COMPONENTI.md
+test_validators.py

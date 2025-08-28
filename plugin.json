@@ -1,0 +1,10 @@
+{
+    "name": "Orpheus TTS ollama CPU Plugin",
+    "description": "Plugin TTS avanzato basato su Orpheus per sintesi vocale di alta qualità con supporto emotivo e voci multiple. Sostituisce Kokoro-Cat con architettura modulare.",
+    "author_name": "Kael & Canapaio",
+    "author_url": "https://github.com/canapaio",
+    "plugin_url": "https://github.com/canapaio/Orpheus",
+    "tags": "tts,voice,speech,synthesis,orpheus,ollama,snac,emotional",
+    "thumb": "",
+    "version": "1.0.0"
+}
