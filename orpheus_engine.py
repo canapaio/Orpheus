@@ -276,8 +276,8 @@ class OrpheusEngine:
                     chunk_audio = np.sin(2 * np.pi * base_freq * t) * 0.2
                     audio_chunks.append(chunk_audio)
                 else:
-                    # Fallback: silenzio
-                    silence = np.zeros(chunk_samples) if np is not None else [0] * chunk_samples
+                    # Fallback: silenzio senza numpy
+                    silence = [0] * chunk_samples
                     audio_chunks.append(silence)
             
             # Combina tutti i chunk
@@ -301,7 +301,7 @@ class OrpheusEngine:
             log.error(f"🚨 Errore conversione audio: {str(e)}")
             return None
     
-    def _create_wav_header(self, audio_data: np.ndarray, sample_rate: int) -> bytes:
+    def _create_wav_header(self, audio_data: 'np.ndarray', sample_rate: int) -> bytes:
         """🎧 Crea header WAV per i dati audio"""
         if np is None:
             return b''

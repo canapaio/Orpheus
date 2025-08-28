@@ -5,11 +5,14 @@ Questo documento descrive tutte le dipendenze utilizzate dal plugin Orpheus TTS 
 ## 🔧 Dipendenze Core
 
 ### pydantic>=2.0.0
-**Utilizzo**: Validazione e gestione delle configurazioni
+**Utilizzo**: Validazione e gestione delle configurazioni (✅ **Migrato a V2**)
 - Utilizzato in `orpheus_settings.py` per definire i modelli di configurazione
+- Utilizza `@field_validator` invece del deprecato `@validator`
+- Configurazione tramite `model_config` invece di `class Config`
 - Fornisce validazione automatica dei tipi e dei valori
 - Gestisce gli enum per voci, emozioni, formati e modelli
 - Essenziale per l'integrazione con il sistema di settings di Cheshire Cat
+- **Nota**: Completamente compatibile con Pydantic V2 senza warning di deprecazione
 
 ### requests>=2.28.0
 **Utilizzo**: Comunicazione HTTP con Ollama
